@@ -16,8 +16,7 @@ const projects = [
       "Transformed a vacant lot into a thriving community garden with 20 vegetable beds, fruit trees, and a gathering space.",
     location: "Downtown",
     date: "Completed March 2023",
-    image: "/images/community-garden.png",
-    fallback: "/placeholder.svg?height=400&width=600&text=Community+Garden",
+    image: "/placeholder.svg?height=600&width=800",
   },
   {
     id: 2,
@@ -27,8 +26,7 @@ const projects = [
       "Organized monthly cleanups that removed over 2 tons of trash from our local river and educated 500+ community members about water protection.",
     location: "Riverside Park",
     date: "Ongoing since 2021",
-    image: "/images/river-cleanup.png",
-    fallback: "/placeholder.svg?height=400&width=600&text=River+Cleanup",
+    image: "/placeholder.svg?height=600&width=800",
   },
   {
     id: 3,
@@ -38,8 +36,7 @@ const projects = [
       "Implemented composting systems in 5 local schools, diverting 1,000+ pounds of food waste monthly and teaching students about the circular economy.",
     location: "District Schools",
     date: "Launched September 2022",
-    image: "/images/school-composting.png",
-    fallback: "/placeholder.svg?height=400&width=600&text=School+Composting",
+    image: "/placeholder.svg?height=600&width=800",
   },
   {
     id: 4,
@@ -49,8 +46,7 @@ const projects = [
       "Planted 200 native trees throughout underserved neighborhoods to increase canopy cover, reduce heat islands, and improve air quality.",
     location: "Eastside Neighborhood",
     date: "Completed Fall 2022",
-    image: "/placeholder.svg?height=400&width=600&text=Tree+Planting",
-    fallback: "/placeholder.svg?height=400&width=600&text=Tree+Planting",
+    image: "/placeholder.svg?height=600&width=800",
   },
   {
     id: 5,
@@ -60,8 +56,7 @@ const projects = [
       "Mobilized 1,000+ residents to advocate for the city's climate action plan, resulting in ambitious emissions reduction targets.",
     location: "City-wide",
     date: "Achieved June 2023",
-    image: "/placeholder.svg?height=400&width=600&text=Climate+Advocacy",
-    fallback: "/placeholder.svg?height=400&width=600&text=Climate+Advocacy",
+    image: "/placeholder.svg?height=600&width=800",
   },
   {
     id: 6,
@@ -71,8 +66,7 @@ const projects = [
       "Partnered with 25 local businesses to eliminate single-use plastics and implement sustainable practices in their operations.",
     location: "Business District",
     date: "Ongoing",
-    image: "/placeholder.svg?height=400&width=600&text=Plastic+Free+Business",
-    fallback: "/placeholder.svg?height=400&width=600&text=Plastic+Free+Business",
+    image: "/placeholder.svg?height=600&width=800",
   },
 ]
 
@@ -132,9 +126,6 @@ export default function ImpactSection() {
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  onError={(e) => {
-                    e.currentTarget.src = project.fallback
-                  }}
                 />
                 <div className="absolute top-4 right-4 bg-card/90 backdrop-blur-sm text-xs font-bold px-3 py-1 rounded-full border border-border">
                   {project.category}
@@ -164,3 +155,4 @@ export default function ImpactSection() {
     </section>
   )
 }
+

@@ -13,8 +13,8 @@ export default function AboutSection() {
               <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="/images/community-environmental-work.png"
-                  alt="Community members working together on environmental projects - diverse group planting trees and cleaning up green spaces"
+                  src="/placeholder.svg?height=600&width=600"
+                  alt="Community members working together"
                   className="w-full h-auto"
                 />
               </div>
@@ -91,3 +91,4 @@ export default function AboutSection() {
     </section>
   )
 }
+
